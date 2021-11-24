@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Alata', sans-serif;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    color: #eee;
+  }
+  .container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container p {
+    font-size: 5rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    overflow: hidden;
+  }
+  .container p span.TypedText {
+    font-style: italic;
+    color: yellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+  }
+  .container p span.TypeCursor {
+    display: inline-block;
+    background-color: #330867;
+    margin-left: 0.1rem;
+    width: 8px;
+    animation: blink 1s infinite;
+  }
+  @keyframes blink {
+    0%  { background-color: #330867; }
+    49% { background-color: #330867; }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+    100%  { background-color: #330867; }
+  }
+  @media only screen and (max-width: 720px) {
+    .container p{
+      font-size: 65px;
+    }
+}
